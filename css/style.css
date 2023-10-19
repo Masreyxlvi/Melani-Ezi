@@ -129,9 +129,7 @@ body {
   bottom: 2.5rem;
   right: 2rem;
   cursor: pointer;
-  /* color: white; */
-  /* opacity: 0.5; */
-  /* mix-blend-mode: difference; */
+  z-index: 9999;
   animation: logoAnimation 4s linear infinite;
   transform-origin: center;
   display: flex;
@@ -757,6 +755,139 @@ body {
   font-weight: 400;
   transition: 0.2s linear;
 }
+/* undang */
+.timeline-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.timeline-inverted {
+  justify-content: flex-end;
+}
+
+.timeline-image {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.timeline-panel {
+  flex: 1;
+}
+
+.timeline-heading h3 {
+  font-size: 3rem;
+  font-family: analogue;
+  margin-bottom: 0.7rem;
+}
+
+.timeline-body p {
+  font-size: 1.2rem;
+}
+
+.timeline {
+  list-style: none;
+  padding: 1.4rem 0;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  width: 1px;
+  background-color: #ccc;
+  left: 50%;
+}
+
+.timeline li {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.timeline li::before,
+.timeline li::after {
+  content: "";
+  display: table;
+}
+
+.timeline li::after {
+  clear: both;
+}
+
+.timeline li .timeline-image {
+  width: 160px;
+  height: 160px;
+  background-color: #ccc;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.timeline li .timeline-panel {
+  width: 40%;
+  float: left;
+  border: 1px solid #ccc;
+  padding: 2rem;
+  position: relative;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.timeline li .timeline-panel::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #ccc;
+  border-right: 0 solid #ccc;
+  border-bottom: 15px solid transparent;
+  top: 80px;
+  right: -15px;
+}
+.timeline li .timeline-panel::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #fff;
+  border-right: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  top: 81px;
+  right: -13px;
+}
+
+.timeline li.timeline-inverted .timeline-panel {
+  float: right;
+}
+
+.timeline li.timeline-inverted .timeline-panel::before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+.timeline li.timeline-inverted .timeline-panel::after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -13px;
+  right: auto;
+}
 
 /* Gallery */
 .gallery {
@@ -781,7 +912,6 @@ body {
 .gallery .container .img-gallery {
   display: grid;
   grid-gap: 2rem;
-
   grid-template-columns: repeat(4, 1fr);
 }
 
@@ -798,12 +928,14 @@ body {
 }
 
 /* Gift */
-.gift {
+.gift,
+.undang {
   padding: 7rem 7%;
-  background-image: linear-gradient(to top, rgba(93, 100, 111, 0.3), rgba(255, 255, 255, 0.3));
+  background-image: linear-gradient(to top, rgba(93, 100, 111, 0.1), rgba(255, 255, 255, 0.3));
 }
 
-.gift h2 {
+.gift h2,
+.undang h2 {
   font-size: 5rem;
   font-family: power;
   text-align: center;
@@ -883,11 +1015,13 @@ body {
 
 .gift .card h3 {
   font-size: 2.5rem;
-  font-weight: 300;
-  margin-bottom: 2rem;
+  margin-bottom: 1.7rem;
+  text-transform: uppercase;
 }
 .gift .card h5 {
-  font-size: 1.4rem;
+  font-weight: 300;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
 }
 .gift .card p {
   text-align: center;
@@ -1146,6 +1280,34 @@ footer .credit h5 {
     font-size: 75%;
   }
 }
+@media (max-width: 992px) {
+  .timeline:before {
+    left: 60px;
+  }
+
+  .timeline li .timeline-image {
+    left: 15px;
+    margin-left: 45px;
+    top: 16px;
+  }
+  .timeline li .timeline-panel {
+    width: calc(100% - 200px);
+    float: right;
+  }
+
+  .timeline li .timeline-panel::before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+  }
+  .timeline li .timeline-panel::after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -13px;
+    right: auto;
+  }
+}
 
 /* Tablet */
 @media (max-width: 768px) {
@@ -1381,6 +1543,11 @@ footer .credit h5 {
   .event-2 .card .box-date .date-event-2 .jam p {
     margin-top: 1rem;
   }
+  /* undang */
+  .timeline li .timeline-image {
+    width: 140px;
+    height: 140px;
+  }
 
   /* gallery */
   .gallery .container .img-gallery {
@@ -1417,5 +1584,21 @@ footer .credit h5 {
 @media (max-width: 450px) {
   html {
     font-size: 52%;
+  }
+
+  .timeline li .timeline-image {
+    width: 80px;
+    height: 80px;
+  }
+  .timeline li .timeline-panel {
+    width: 65%;
+    transform: translateX(-20px);
+  }
+
+  .timeline li .timeline-panel::before {
+    top: 30px;
+  }
+  .timeline li .timeline-panel::after {
+    top: 31px;
   }
 }
