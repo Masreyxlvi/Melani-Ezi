@@ -288,7 +288,7 @@ body {
   padding: 5rem 2rem;
 }
 .quran .row .content h3 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 1rem;
   color: var(--gray-100);
   font-weight: 700;
@@ -296,7 +296,7 @@ body {
   font-family: power, sans-serif;
 }
 .quran .row .content p {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   margin-bottom: 0.8rem;
   color: var(--gray-50);
   font-family: "Poppins", Sans-serif;
@@ -396,7 +396,7 @@ body {
   font-family: analogue, sans-serif;
   font-weight: normal;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .about2 .row .content p {
   font-size: 2rem;
@@ -486,7 +486,7 @@ body {
 .event .card .box-img .slider-img {
   height: 100%;
   display: flex;
-  animation: slide 16s ease-out infinite;
+  animation: slide 12s ease-out infinite;
 }
 .event .card .box-img .slider-img img {
   width: 100%;
@@ -624,7 +624,7 @@ body {
 .event-2 .card .box-img .slider-img {
   height: 100%;
   display: flex;
-  animation: slide 16s infinite;
+  animation: slide 12s infinite;
 }
 .event-2 .card .box-img .slider-img img {
   width: 100%;
@@ -800,6 +800,7 @@ body {
   padding: 1.4rem 0;
   margin-top: 1rem;
   position: relative;
+  overflow: hidden;
 }
 
 .timeline::before {
@@ -807,7 +808,7 @@ body {
   top: 0;
   bottom: 0;
   position: absolute;
-  width: 1px;
+  width: 3px;
   background-color: #ccc;
   left: 50%;
 }
@@ -838,6 +839,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  box-shadow: 1px 1px 3px rgba(58, 79, 71, 0.2);
 }
 
 .timeline li .timeline-panel {
@@ -847,7 +849,8 @@ body {
   padding: 2rem;
   position: relative;
   border-radius: 8px;
-  background-color: #fff;
+  background-color: var(--bg);
+  box-shadow: 1px 1px 3px rgba(58, 79, 71, 0.2);
 }
 .timeline li .timeline-panel::before {
   content: "";

@@ -144,7 +144,7 @@ function noUtsman() {
   textarea.select();
   document.execCommand("copy");
   document.body.removeChild(textarea);
-  toastr["success"]("No Dana Berhasil Disalin", "Success");
+  toastr["success"]("No Rek Berhasil Disalin", "Success");
 }
 function noYani() {
   var teks = document.getElementById("textSalin2").textContent;
