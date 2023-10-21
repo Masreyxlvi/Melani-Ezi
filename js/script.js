@@ -159,3 +159,14 @@ function noYani() {
   document.body.removeChild(textarea);
   toastr["success"]("No Dana Berhasil Disalin", "Success");
 }
+
+// Url Params
+// url Data
+const urlParams = new URLSearchParams(window.location.search);
+const nama = urlParams.get("n") || "";
+const pronoun = urlParams.get("p") || "Bapak/Ibu/Saundara/i,";
+
+const namaContainer = document.querySelector(".popup h4 span");
+namaContainer.innerText = `${pronoun} ${nama}`.replace(/ , $/, ",");
+
+document.querySelector("#nama").value = nama;

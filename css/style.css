@@ -59,7 +59,6 @@ body {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
   background-image: url(../images/popup.JPG);
   background-size: cover;
   background-position: center; /* Latar belakang transparan */
@@ -101,7 +100,16 @@ body {
   text-transform: uppercase;
   font-family: analogue, Sans-Serif;
   margin-bottom: 3rem;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
+}
+.popup-content h4 {
+  font-size: 2em;
+  font-weight: 500;
+  color: var(--bg);
+  text-shadow: 1px 1px 3px rgba(58, 79, 71, 0.9);
+  font-family: analogue, Sans-Serif;
+  margin-bottom: 3rem;
+  /* letter-spacing: 1.5px; */
 }
 .popup-content h1 span {
   color: var(--warning);
