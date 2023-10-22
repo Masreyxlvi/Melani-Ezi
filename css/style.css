@@ -1110,6 +1110,7 @@ body {
   font-size: 1.6rem;
   background: none;
   vertical-align: top;
+  /* color: var(--dark-75); */
 }
 .rsvp .row .message form .input-group textarea {
   width: 100%;
