@@ -378,9 +378,20 @@
   
       <div class="content">
         <h1 >TerimaKasih</h1>
-        <h4>Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan do’a restu kepada kami.</h4>
+        <p>Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan do’a restu kepada kami.</p>
         <h4 style="margin-top: 8rem;" >KAMI YANG BERBAHAGIA</h4>
         <h3 >Melani <span>&</span> Ezi</h3>
+        <div class="family">
+          <div class="family-outher">
+            <h5>Bpk. Tatang Alinurdin <br>& Ibu Hj. Eni Nuraeni</h5>
+          </div>
+          <div class="family-outher">
+            <h5>Bpk. Yana Mulyana.ST <br>& Ibu Evi Nurmayanvi</h5>
+          </div>
+          <div class="family-outher">
+            <h5>Bpk. Budi Hadiman <br>& Ibu Ani</h5>
+          </div>
+        </div>
       </div>
     </section> 
     <!-- End Doa -->
@@ -408,65 +419,14 @@
     <script>
       feather.replace();
     </script>
-    <!-- gapi -->
-    <script src="https://apis.google.com/js/api.js"></script>
-    <!-- calendar
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
-    <script>
-      // Ganti dengan kredensial JSON yang Anda unduh.
-      const CLIENT_ID = '831981731845-i6raovn36v67loc5rn7hl1tka48jqc0b.apps.googleusercontent.com';
-      const API_KEY = 'AIzaSyBrtCnOX06VgoR0QhGJ4EdRLIUoCQKcXv4';
-      
-      
-      // Menginisialisasi klien API Google Calendar.
-      gapi.load('client:auth2', () => {
-        gapi.client.init({
-          apiKey: API_KEY,
-          clientId: CLIENT_ID,
-          discoveryDocs: ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"],
-          scope: "https://www.googleapis.com/auth/calendar.events"
-        });
-      });
-  
-      // Fungsi untuk menambahkan acara ke Google Calendar.
-      function addToGoogleCalendar() {
-        gapi.auth2.getAuthInstance().signIn()
-          .then(() => {
-            const event = {
-              summary: 'Wedding Melani & Ezi',
-              location: 'Kp. Jangari, RT 005 RW 010, Desa Bobojong, Kec. Mande, Kab. Cianjur.',
-              description: 'Undangan pernikahan Melani & Ezi',
-              start: {
-                dateTime: '2023-10-20T10:00:00',
-                timeZone: 'Waktu-Zona-Anda',
-              },
-              end: {
-                dateTime: '2023-11-12T12:08:00',
-                timeZone: 'Waktu-Zona-Anda',
-              },
-            };
-  
-            gapi.client.calendar.events.insert({
-              calendarId: 'primary',
-              resource: event,
-            }).then((response) => {
-              console.log('Acara berhasil ditambahkan: ', response.result);
-            }).catch((error) => {
-              console.error('Kesalahan: ', error);
-            });
-          });
-      }
-  
-      document.getElementById('save-to-calendar').addEventListener('click', addToGoogleCalendar);
-    </script>
    
- 
-    
     <!-- jquery -->
     <script src="js/jquery.js"></script>
      
 
     <!-- arctext -->
+    <script src="assets/Arctext/js/jquery.arctext.js"></script>
+    <!-- MY JS -->
     <script src="js/script.js"></script>
     <!-- Lihgtbox js -->
     <script src="js/lightbox-plus-jquery.js"></script>
@@ -476,8 +436,6 @@
     <script src="assets/toastr/toastr.min.js"></script>
     <!-- Aos -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <!-- arctext -->
-    <script src="assets/Arctext/js/jquery.arctext.js"></script>
     <!-- sweetalert -->
     <script src="assets/sweetalert2/sweetalert2.all.min.js"></script>
     <script>

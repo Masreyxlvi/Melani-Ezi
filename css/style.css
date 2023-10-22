@@ -71,7 +71,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 7rem;
+  padding-top: 9rem;
   margin: 5rem auto;
 }
 .popup-content {
@@ -1226,6 +1226,14 @@ body {
   text-shadow: 0.5px 0.5px 2.5px rgba(58, 79, 71, 0.8);
   max-width: 50rem;
 }
+.doa .content p {
+  font-size: 1.5em;
+  color: var(--bg);
+  margin-top: 3rem;
+  /* font-weight: 600; */
+  max-width: 50rem;
+  font-weight: 300;
+}
 .doa .content h3 {
   font-size: 3em;
   margin-top: 2rem;
@@ -1237,6 +1245,21 @@ body {
 }
 .doa .content h3 span {
   color: var(--warning);
+}
+
+.doa .content .family {
+  display: flex;
+  justify-content: center;
+}
+
+.doa .content .family .family-outher {
+  padding: 4rem 2rem;
+}
+
+.doa .content .family .family-outher h5 {
+  font-size: 1rem;
+  color: var(--bg);
+  font-weight: 400;
 }
 
 /* footer */
@@ -1588,7 +1611,7 @@ footer .credit h5 {
     padding: 3rem 7%;
   }
   .doa .content {
-    padding-top: 33rem;
+    padding-top: 37rem;
   }
 }
 
